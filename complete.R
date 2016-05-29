@@ -1,5 +1,4 @@
-## Set working directory
-setwd('/home/R/demo')
+
 complete <- function(directory, id = 1:332) {
         ## Create nobs vector
         nobs <- NULL
