@@ -1,3 +1,4 @@
+## Set working directory
 setwd('/home/R/demo')
 pollutantmean <- function(directory, pollutant, id = 1:332) {
         ## Create container vector
