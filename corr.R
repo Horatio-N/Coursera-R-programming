@@ -1,3 +1,5 @@
+## Set working directory
+setwd('/home/R/demo')
 corr <- function(directory, threshold = 0) {
         ## Create container vector
         cor.vec <- NULL
