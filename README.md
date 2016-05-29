@@ -1,5 +1,5 @@
 # Coursera-R-programming
-Coursera week 2 programming assignment source codes:
+Coursera R Programming course, programming assignment week 2 source codes:
   - pollutantmean.R
   - complete.R
   - corr.R
