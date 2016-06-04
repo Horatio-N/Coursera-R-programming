@@ -5,11 +5,11 @@ complete <- function(directory, id = 1:332) {
         ## List out all file in specdata folder
         csv <- list.files(paste('./', directory, '/', sep = ''))
         ## Create path to csv files
-        pat <- paste(getwd(), '/', directory, '/', csv, sep = '')
+        link <- paste(getwd(), '/', directory, '/', csv, sep = '')
         ## Add data to nobs
         for (i in id){
                 ## Read file
-                dat <- read.csv(pat[i])
+                dat <- read.csv(link[i])
                 ## Calculate complete cases
                 cal <- sum(complete.cases(dat))
                 ## Add result to nobs
