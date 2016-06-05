@@ -1,4 +1,4 @@
-## How to install 'Swirl' pakage in R on Linux machine
+## How to install R package 'Swirl' on Linux machine
 - Turn on Terminal
 - Install libcurl4-gnutls-dev,  libcurl4-openssl-dev, libssl-dev by running:
 ```sh
