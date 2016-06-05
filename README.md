@@ -1,4 +1,13 @@
 # About Coursera-R-programming Git
-This git includes source codes from week 2 and week 4 assignments. It also contains other instructions for R Programming online course from Coursera.
+This git includes source codes and other instructions for R Programming online course from Coursera.
+## Source codes
+### Week 2:
+- pollutantmean.R
+- complete.R
+- corr.R
+### Week 4:
+- best.R
+- rankhospital.R
+- rankall.R
 
 
