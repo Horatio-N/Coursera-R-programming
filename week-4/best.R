@@ -21,25 +21,19 @@ best <- function(state, outcome){
                 stop('invalid state')
         if (sum(grepl(outcome, outcome.list)) == 0)
                 stop('invalid outcome')
+        ## Column number return function
+        g <- function (k){
+                i <- NULL
+                if (k == 'heart attack') i <- 11 else
+                        if(k == 'heart failure') i <- 17 else 
+                                i <- 23
+                        i
+        }
         ## Return hospital name in that state with lowest 30-day death
         state.outcome <- subset(outcome.data, outcome.data$State == state)
-        if (outcome == 'heart attack'){
-                outcome.num <- as.numeric(na(state.outcome[, 11]))
-                .min <- min(outcome.num, na.rm = TRUE)
-                hospital <- sort(subset(state.outcome$Hospital.Name, 
-                                        outcome.num == .min))
-                return(hospital[1])
-        } else if (outcome == 'heart failure'){
-                outcome.num <- as.numeric(na(state.outcome[, 17]))
-                .min <- min(outcome.num, na.rm = TRUE)
-                hospital <- sort(subset(state.outcome$Hospital.Name, 
-                                        outcome.num == .min))
-                return(hospital[1])
-        } else {
-                outcome.num <- as.numeric(na(state.outcome[, 23]))
-                .min <- min(outcome.num, na.rm = TRUE)
-                hospital <- sort(subset(state.outcome$Hospital.Name, 
-                                        outcome.num == .min))
-                return(hospital[1])
-        }
+        outcome.num <- as.numeric(na(state.outcome[, g(outcome)]))
+        .min <- min(outcome.num, na.rm = TRUE)
+        hospital <- sort(subset(state.outcome$Hospital.Name, 
+                                outcome.num == .min))
+        return(hospital[1])
 }
