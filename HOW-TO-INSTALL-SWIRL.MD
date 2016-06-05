@@ -4,4 +4,9 @@
 ```sh
 $ sudo apt-get install libcurl4-gnutls-dev  libcurl4-openssl-dev libssl-dev
 ```
+3. Turn on R in Terminal or run Rstudio
+4. Install Swirl package
+```sh
+> install.packages('swirl')
+```
 
